@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CounterReceipt.Models;
 
 namespace CounterReceipt
 {
@@ -18,7 +19,8 @@ namespace CounterReceipt
         {
             if (IsValid)
             {
-                
+                Receipt counterReceipt = new Receipt(Double.Parse(totalCost.Text));
+                Label1.Text = counterReceipt.Subtotal.ToString();
             }
             else
             {

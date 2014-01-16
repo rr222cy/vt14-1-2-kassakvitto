@@ -28,6 +28,9 @@
                     <p>
                         <asp:Button ID="calculateDiscount" runat="server" Text="Beräkna rabatt" CssClass="standardButton" OnClick="calculateDiscount_Click"></asp:Button>
                     </p>
+                    <p>
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                    </p>
                 </section>
             </main>
         </div>

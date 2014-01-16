@@ -30,7 +30,7 @@ namespace CounterReceipt.Models
         // Konstruktorer för klassen.
         public Receipt(double subtotal)
         {
-
+            Subtotal = subtotal;
         }
     }
 }
