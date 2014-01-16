@@ -17,11 +17,16 @@
             <main>
                 <section>
                     <p>Total köpesumma:</p>
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validation-summary-errors"></asp:ValidationSummary>
-                    <p><asp:TextBox ID="totalCost" runat="server" defaultbutton="calculateDiscount"></asp:TextBox> kr</p>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Du måste ange en summa!" Display="Dynamic" Text="*" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:RequiredFieldValidator>
-
-                    <p><asp:Button ID="calculateDiscount" runat="server" Text="Beräkna rabatt" CssClass="standardButton" OnClick="calculateDiscount_Click"></asp:Button></p>
+                    
+                    <p>
+                        <asp:TextBox ID="totalCost" runat="server" defaultbutton="calculateDiscount"></asp:TextBox> kr 
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Du måste ange en summa!" Display="Dynamic" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Ange en summa som är större än 0!" Display="Dynamic" Type="Currency" Operator="DataTypeCheck" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:CompareValidator>                       
+                    </p>               
+                    
+                    <p>
+                        <asp:Button ID="calculateDiscount" runat="server" Text="Beräkna rabatt" CssClass="standardButton" OnClick="calculateDiscount_Click"></asp:Button>
+                    </p>
                 </section>
             </main>
         </div>
