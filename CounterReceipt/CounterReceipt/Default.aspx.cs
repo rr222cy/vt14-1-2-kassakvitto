@@ -12,19 +12,25 @@ namespace CounterReceipt
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Panel1.Visible = false;
+            }
         }
 
         protected void calculateDiscount_Click(object sender, EventArgs e)
         {
             if (IsValid)
             {
+                Panel1.Visible = true;
+
                 // Om alla fält validerar så anropas min metod för att beräkna rabatt, sedan formateras strängar och skrivs ut i rätt labelkontroll.
                 Receipt counterReceipt = new Receipt(Double.Parse(totalCost.Text));
                 labelSubtotal.Text = String.Format("{0:c}", counterReceipt.Subtotal);
                 labelDiscountRate.Text = String.Format("{0} %", counterReceipt.DiscountRate*100);
                 labelMoneyOff.Text = String.Format("{0:c}", counterReceipt.MoneyOff);
                 labelTotal.Text = String.Format("{0:c}", counterReceipt.Total);
+                
             }
             else
             {
