@@ -21,7 +21,8 @@
                     <p>
                         <asp:TextBox ID="totalCost" runat="server" defaultbutton="calculateDiscount"></asp:TextBox> kr 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Du måste ange en summa!" Display="Dynamic" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Ange en summa som är större än 0!" Display="Dynamic" Type="Currency" Operator="DataTypeCheck" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:CompareValidator>                       
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Ange summan i ett numeriskt värde!" Display="Dynamic" Type="Currency" Operator="DataTypeCheck" ControlToValidate="totalCost" CssClass="field-validation-error"></asp:CompareValidator>
+                        <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Summan måste vara större än 0!" Type="Currency" Operator="GreaterThan" ValueToCompare="0" CssClass="field-validation-error" ControlToValidate="totalCost"></asp:CompareValidator>       
                     </p>               
                     
                     <p>

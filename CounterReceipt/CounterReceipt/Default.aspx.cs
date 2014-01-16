@@ -18,7 +18,7 @@ namespace CounterReceipt
         {
             if (IsValid)
             {
-
+                
             }
             else
             {
