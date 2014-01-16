@@ -20,11 +20,11 @@ namespace CounterReceipt
             if (IsValid)
             {
                 Receipt counterReceipt = new Receipt(Double.Parse(totalCost.Text));
-                Label1.Text = counterReceipt.Subtotal.ToString();
+                Label1.Text = counterReceipt.ToString();
             }
             else
             {
-
+                throw new ArgumentException("Fältet innehåller inte det förväntade värdet!");
             }
         }
     }
