@@ -49,6 +49,14 @@ section {
     margin: 0px auto;
 }
 
+.receiptBox {
+    width: 280px;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #dfe1ba;
+    border: 1px solid;
+}
+
 
 /* Text settings */
 
@@ -61,6 +69,26 @@ h1 {
     padding-top: 2%;
 }
 
+h2 {
+    font-size: 18pt;
+    line-height: 200%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.receiptText {
+    font-size: 10pt;
+}
+
+.receiptValues {
+    text-align: right;
+    font-size: 10pt;
+}
+
+.receiptBox p {
+    text-align: center;
+    font-size: 10pt;
+}
 
 
 /* Link settings */

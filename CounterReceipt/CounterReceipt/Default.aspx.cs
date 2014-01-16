@@ -19,8 +19,12 @@ namespace CounterReceipt
         {
             if (IsValid)
             {
+                // Om alla fält validerar så anropas min metod för att beräkna rabatt, sedan formateras strängar och skrivs ut i rätt labelkontroll.
                 Receipt counterReceipt = new Receipt(Double.Parse(totalCost.Text));
-                Label1.Text = counterReceipt.ToString();
+                labelSubtotal.Text = String.Format("{0:c}", counterReceipt.Subtotal);
+                labelDiscountRate.Text = String.Format("{0} %", counterReceipt.DiscountRate*100);
+                labelMoneyOff.Text = String.Format("{0:c}", counterReceipt.MoneyOff);
+                labelTotal.Text = String.Format("{0:c}", counterReceipt.Total);
             }
             else
             {

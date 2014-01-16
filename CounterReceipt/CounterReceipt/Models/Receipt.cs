@@ -44,26 +44,34 @@ namespace CounterReceipt.Models
 
             if(Subtotal <= 499)
             {
-                Total = Subtotal * 1;
+                DiscountRate = 0.0;
+                MoneyOff = Subtotal * DiscountRate;
+                Total = Subtotal - MoneyOff;
             }
             else if(Subtotal >= 500 && Subtotal <= 999)
             {
-                Total = Subtotal * 0.95;
+                DiscountRate = 0.05;
+                MoneyOff = Subtotal * DiscountRate;
+                Total = Subtotal - MoneyOff;
             }
             else if (Subtotal >= 1000 && Subtotal <= 4999)
             {
-                Total = Subtotal * 0.90;
+                DiscountRate = 0.10;
+                MoneyOff = Subtotal * DiscountRate;
+                Total = Subtotal - MoneyOff;
             }
             else if (Subtotal >= 5000)
             {
-                Total = Subtotal * 0.85;
+                DiscountRate = 0.15;
+                MoneyOff = Subtotal * DiscountRate;
+                Total = Subtotal - MoneyOff;
             }
         }
 
         // Överskuggar här ToString för att kunna kasta ut ett välformaterat resultat på beräkningen.
         public override string ToString()
         {
-            return String.Format("Att betala: {0:c}", Total);
+            return String.Format("Totalt: {0:c}\n\nRabattsats: {1} %\nRabatt: {2:c} Att betala: {3:c}", Subtotal, DiscountRate * 100, MoneyOff, Total);
         }
 
         // Konstruktorer för klassen.

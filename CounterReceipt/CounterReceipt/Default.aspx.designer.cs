@@ -67,12 +67,39 @@ namespace CounterReceipt {
         protected global::System.Web.UI.WebControls.Button calculateDiscount;
         
         /// <summary>
-        /// Label1 control.
+        /// labelSubtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label labelSubtotal;
+        
+        /// <summary>
+        /// labelDiscountRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelDiscountRate;
+        
+        /// <summary>
+        /// labelMoneyOff control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelMoneyOff;
+        
+        /// <summary>
+        /// labelTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelTotal;
     }
 }

@@ -28,9 +28,36 @@
                     <p>
                         <asp:Button ID="calculateDiscount" runat="server" Text="Beräkna rabatt" CssClass="standardButton" OnClick="calculateDiscount_Click"></asp:Button>
                     </p>
-                    <p>
-                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                    </p>
+
+                    <div class="receiptBox">
+                        <h2>Roberts bullar</h2>
+                        
+                        <p>En del av galna sleven</p>
+                        <p>Tel: 070-324 31 71</p>
+                        <p>Öppettider: 7-24</p>
+                        <p>--------------------------------------------------------</p>
+                            <table width="100%">
+                                <tr>
+                                    <td>Totalt:</td>
+                                    <td class="receiptValues"><asp:Label ID="labelSubtotal" runat="server" Text="" CssClass="labelMargin"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td>Rabattsats:</td>
+                                    <td class="receiptValues"><asp:Label ID="labelDiscountRate" runat="server" Text="" CssClass="labelMargin"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td>Rabatt:</td>
+                                    <td class="receiptValues"><asp:Label ID="labelMoneyOff" runat="server" Text="" CssClass="labelMargin"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td>Att betala:</td>
+                                    <td class="receiptValues"><asp:Label ID="labelTotal" runat="server" Text="" CssClass="labelMargin"></asp:Label></td>
+                                </tr>
+                            </table>
+                        <p>--------------------------------------------------------</p>
+                        <p>ORG.NR: 19910317-XXXX</p>
+                        <p>VÄLKOMMEN ÅTER!</p>
+                    </div>
                 </section>
             </main>
         </div>
